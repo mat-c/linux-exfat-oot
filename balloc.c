@@ -3,9 +3,13 @@
  *  Copyright (C) 2012-2013 Samsung Electronics Co., Ltd.
  */
 
+#include <linux/version.h>
 #include <linux/blkdev.h>
 #include <linux/slab.h>
 #include <linux/buffer_head.h>
+#if LINUX_VERSION_CODE >= KERNEL_VERSION(5, 4, 0)
+#include <linux/sched/signal.h>
+#endif
 
 #include "exfat_raw.h"
 #include "exfat_fs.h"
