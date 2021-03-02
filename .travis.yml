@@ -88,6 +88,7 @@ script:
  - sudo mkfs.exfat /dev/loop20
  - sudo mkfs.exfat /dev/loop21
  - cd ..
+ - cp local.config exfat-testsuites/
  - cd exfat-testsuites/
  - tar xzvf xfstests-exfat.tgz > /dev/null
  - cd xfstests-exfat
